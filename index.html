@@ -1,12 +1,68 @@
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<!DOCTYPE html>
+<style>
+  label{
+    margin-left: 0px;
+    margin-right: 25px;
+  }
+  table{
+    border-spacing: 10px;
+  }
+  .tdBtn{
+    padding-left: 36px;
+  }
+  button{
+    margin: 10px;
+  }
+  .txtAdd{
+    width: 97%;
+  }
+</style>
+
+<body>
+  <form>
+    <table>
+      <tr>
+        <div class="dName">
+          <td><label for="txtFName" class="lblFName">First Name</label></td>
+          <td><input type="text" class="txtFName" id="txtFName" ></td>
+            <td><label for="txtLName" class="lblLName">Last Name</label></td>
+            <td><input type="text" class="txtLName" id="txtLName"></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="dAdd1">
+          <td><label for="txtAdd1" class="lblAdd1">Address 1</label></td>
+          <td colspan="3"><input type="text" class="txtAdd" id="txtAdd1"><td>
+        </div>
+      </tr>
+      <tr>
+        <div class="dAdd2">
+          <td><label for="txtAdd2" class="lblAdd2">Address 2</label></td>
+          <td colspan="3"><input type="text" class="txtAdd" id="txtAdd2"></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="dStateZip">
+          <td><label for="txtState" class="lblState">State</label></td>
+          <td><input type="text" class="txtState" id="txtState"></td>
+          <td><label for="txtZip" class="lblZip">Zip Code</label></td>
+          <td><input type="number" class="txtZip" id="txtZip"></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="dEmailPhone">
+          <td><label for="txtEmail" class="lblEmail">Email</label></td>
+          <td><input type="email" class="txtEmail" id="txtEmail"></td>
+          <td><label for="txtPhone" class="lblPhone">Phone Number</label></td>
+          <td><input type="phone" class="txtPhone" id="txtPhone"></td>
+        </div>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="tdBtn"><button type="reset" class="btnClear">Clear</button><button type="submit" class="btnSubmit">Submit</button></td>
+      <tr>
+    </table>
+  </form>
+</body>
