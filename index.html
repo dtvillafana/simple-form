@@ -16,6 +16,17 @@
   .txtAdd{
     width: 97%;
   }
+  body{
+    background: #48ACA5;
+    text-align: center;
+  }
+  body > *{
+    text-align: left;
+  }
+  form{
+    display: inline-block;
+  }
+
 </style>
 
 <body>
@@ -23,10 +34,10 @@
     <table>
       <tr>
         <div class="dName">
-          <td><label for="txtFName" class="lblFName">First Name</label></td>
-          <td><input type="text" class="txtFName" id="txtFName" ></td>
-            <td><label for="txtLName" class="lblLName">Last Name</label></td>
-            <td><input type="text" class="txtLName" id="txtLName"></td>
+          <td><label for="txtFName" class="lblFName">First Name*</label></td>
+          <td><input type="text" class="txtFName" id="txtFName" required></td>
+            <td><label for="txtLName" class="lblLName">Last Name*</label></td>
+            <td><input type="text" class="txtLName" id="txtLName" required></td>
         </div>
       </tr>
       <tr>
@@ -51,10 +62,10 @@
       </tr>
       <tr>
         <div class="dEmailPhone">
-          <td><label for="txtEmail" class="lblEmail">Email</label></td>
-          <td><input type="email" class="txtEmail" id="txtEmail"></td>
-          <td><label for="txtPhone" class="lblPhone">Phone Number</label></td>
-          <td><input type="phone" class="txtPhone" id="txtPhone"></td>
+          <td><label for="txtEmail" class="lblEmail">Email*</label></td>
+          <td><input type="email" class="txtEmail" id="txtEmail" required></td>
+          <td><label for="txtPhone" class="lblPhone">Phone Number*</label></td>
+          <td><input type="phone" class="txtPhone" id="txtPhone" required></td>
         </div>
       </tr>
       <tr>
