@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+  <form method="POST">
+
+    <h1>YR Summerfest 2022</h1>
+    <h2>Registration Form</h2>
+    <table>
+      <tr>
+        <div class="dName">
+          <td><label for="txtFName" class="lblFName">First Name*</label></td>
+          <td><input type="text" class="txtFName" id="txtFName" required></td>
+            <td><label for="txtLName" class="lblLName">Last Name*</label></td>
+            <td><input type="text" class="txtLName" id="txtLName" required></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="dAdd1">
+          <td><label for="txtAdd1" class="lblAdd1">Address 1</label></td>
+          <td colspan="3"><input type="text" class="txtAdd" id="txtAdd1"><td>
+        </div>
+      </tr>
+      <tr>
+        <div class="dAdd2">
+          <td><label for="txtAdd2" class="lblAdd2">Address 2</label></td>
+          <td colspan="3"><input type="text" class="txtAdd" id="txtAdd2"></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="dStateZip">
+          <td><label for="txtState" class="lblState">State</label></td>
+          <td><input type="text" class="txtState" id="txtState"></td>
+          <td><label for="txtZip" class="lblZip">Zip Code</label></td>
+          <td><input type="number" class="txtZip" id="txtZip"></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="dEmailPhone">
+          <td><label for="txtEmail" class="lblEmail">Email*</label></td>
+          <td><input type="email" class="txtEmail" id="txtEmail" required></td>
+          <td><label for="txtPhone" class="lblPhone">Phone Number*</label></td>
+          <td><input type="phone" class="txtPhone" id="txtPhone" required></td>
+        </div>
+      </tr>
+      <tr>
+      <tr>
+        <div class="dNumTickets">
+          <td colspan="2"><label for="txtNumTickets" class="lblNumTickets">How many tickets would you like to reserve?</label></td>
+          <td colspan="2"><input type="number" class="txtNumTickets" id="txtNumTickets" min="1" max="10" required></td>
+        </div>
+      </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="tdBtn"><button type="reset" class="btnClear">Clear</button><button type="submit" class="btnSubmit">Submit</button></td>
+      <tr>
+    </table>
+  </form>
+</body>
+{% endblock %}

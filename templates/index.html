@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+  <form>
+        <div class="dName">
+    <h1>YR Summerfest 2022</h1>
+    <h2>Registration Form</h2>
+	<h2> {{ title }} </h2>
+   {% if first_name %}
+   <h2> Thanks, {{ first_name }} </h2>
+   {% endif %}
+  </form>
+			<form method="POST">
+				{{ form.hidden_tag() }}
+
+				{{ form.first_name.label }}
+				{{ form.first_name() }}
+        <br/>
+        <br/>
+
+				{{ form.last_name.label }}
+				{{ form.last_name() }}
+        <br/>
+        <br/>
+
+				{{ form.email.label }}
+				{{ form.email() }}
+        <br/>
+        <br/>
+
+				{{ form.address.label }}
+				{{ form.address() }}
+        <br/>
+        <br/>
+
+				{{ form.state.label }}
+				{{ form.state() }}
+        <br/>
+        <br/>
+
+				{{ form.zip.label }}
+				{{ form.zip() }}
+        <br/>
+        <br/>
+
+				{{ form.phone_number.label }}
+				{{ form.phone_number() }}
+        <br/>
+        <br/>
+
+				{{ form.num_tickets.label }}
+				{{ form.num_tickets() }}
+				<br/>
+        <br/>
+        <br/>
+				{{ form.submit() }}
+
+			</form>
+</body>
+
+{% endblock %}
