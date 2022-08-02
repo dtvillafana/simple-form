@@ -4,13 +4,12 @@
 <body>
   <form>
         <div class="dName">
-    <h1>YR Summerfest 2022</h1>
-    <h2>Registration Form</h2>
-	<h2> {{ title }} </h2>
-   {% if first_name %}
-   <h2> Thanks, {{ first_name }}</h2>
-   <h2> Your submission has been recorded </h2>
-   {% endif %}
+        <h1>YR Summerfest 2022</h1>
+      	<h2> {{ title }} </h2>
+        {% if first_name %}
+            <h2> Thanks, {{ first_name }}</h2>
+            <h2> Your submission has been recorded </h2>
+        {% endif %}
   </form>
 			<form method="POST">
 				{{ form.hidden_tag() }}

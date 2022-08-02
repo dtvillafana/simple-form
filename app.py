@@ -78,7 +78,7 @@ def testing():
 
 @app.route('/', methods=['GET', 'POST'])
 def index(): 
-    title = 'Registration Web Form'
+    title = 'Registration Form'
     form = RegisterForm()
     first_name = None
     # Validates Form
