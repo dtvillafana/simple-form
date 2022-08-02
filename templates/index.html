@@ -2,16 +2,15 @@
 
 {% block content %}
 <body>
-  <form>
+  <form method="POST">
         <div class="dName">
-        <h1>YR Summerfest 2022</h1>
+          <img src="{{ url_for('static', filename='yr_summerfest.png') }}" />
       	<h2> {{ title }} </h2>
         {% if first_name %}
             <h2> Thanks, {{ first_name }}</h2>
             <h2> Your submission has been recorded </h2>
         {% endif %}
-  </form>
-			<form method="POST">
+
 				{{ form.hidden_tag() }}
 
 				{{ form.first_name.label }}
