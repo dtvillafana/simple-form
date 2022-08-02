@@ -26,6 +26,7 @@ class Registrants(db.Model):
     last_name = db.Column(db.String(50), nullable=False)
     address = db.Column(db.String(100), nullable=True)
     state = db.Column(db.String(25), nullable=True)
+    city = db.Column(db.String(50), nullable=True)
     zip = db.Column(db.Integer, nullable=True)
     phone_number = db.Column(db.String(15), nullable=False)
     email = db.Column(db.String(100), nullable=False)
@@ -48,10 +49,10 @@ class RegisterForm(FlaskForm):
     email = StringField("Email *", validators=[Email(check_deliverability=True)])
     address = StringField("Address")
     state = StringField("State")
+    city = StringField("City")
     zip = StringField("Zip Code")  
     phone_number = StringField("Phone Number *", validators=[DataRequired()])
     num_tickets = StringField("How Many Tickets Would You Like To Reserve? *", validators=[DataRequired()])
-
     submit = SubmitField('Submit')
 
 
@@ -85,7 +86,7 @@ def index():
     if form.validate_on_submit():
         registrant =  Registrants.query.filter_by(phone_number=form.phone_number.data).first()
         if registrant is None:
-            registrant = Registrants(first_name=form.first_name.data, last_name=form.last_name.data, email=form.email.data, address=form.address.data, state=form.state.data, zip=form.zip.data, phone_number=form.phone_number.data, num_tickets=form.num_tickets.data)
+            registrant = Registrants(first_name=form.first_name.data, last_name=form.last_name.data, email=form.email.data, address=form.address.data, state=form.state.data, city=form.city.data, zip=form.zip.data, phone_number=form.phone_number.data, num_tickets=form.num_tickets.data)
             db.session.add(registrant)
             db.session.commit()
             flash("Registration Submitted!")
@@ -95,6 +96,7 @@ def index():
             form.email.data = ''
             form.address.data = ''
             form.state.data = ''
+            form.city.data = ''
             form.zip.data = ''
             form.phone_number.data = ''
             form.num_tickets.data = ''
