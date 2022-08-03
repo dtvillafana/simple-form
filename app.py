@@ -82,6 +82,7 @@ def index():
     title = 'Registration Form'
     form = RegisterForm()
     first_name = None
+    phone_number = None
 
     # Validates Form
     if form.validate_on_submit():
@@ -101,11 +102,14 @@ def index():
             form.zip.data = ''
             form.phone_number.data = ''
             form.num_tickets.data = ''
+        else:
+            phone_number = registrant
 
 
     return render_template('index.html',
             title=title,
             first_name=first_name,
+            phone_number=phone_number,
             form=form)
 
 
