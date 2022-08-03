@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, send_from_directory, flash, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField
-from wtforms.validators import DataRequired, Length, NumberRange, Email
+from wtforms.validators import DataRequired, Length, NumberRange, Email, Optional
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -46,11 +46,11 @@ class FirstName(FlaskForm):
 class RegisterForm(FlaskForm):
     first_name = StringField("First Name *", validators=[DataRequired(message="Enter Your First Name")])
     last_name = StringField("Last Name *", validators=[DataRequired(message="Enter Your Last Name")])
-    email = StringField("Email *", validators=[Email(message="Invalid Email Input!", check_deliverability=True)])
+    email = StringField("Email *", validators=[Email(message="Invalid Email!", check_deliverability=True)])
     address = StringField("Address")
     state = StringField("State")
     city = StringField("City")
-    zip = StringField("Zip Code")  
+    zip = IntegerField("Zip Code", validators=[Optional()])  
     phone_number = StringField("Phone Number *", validators=[Length(min=7, max=16, message="Invalid Phone Number!")])
     num_tickets = IntegerField("How Many Tickets Would You Like To Reserve? *", validators=[NumberRange(min=1, max=20, message="Invalid Ticket Amount!")])
     submit = SubmitField('Submit')
@@ -82,6 +82,7 @@ def index():
     title = 'Registration Form'
     form = RegisterForm()
     first_name = None
+
     # Validates Form
     if form.validate_on_submit():
         registrant =  Registrants.query.filter_by(phone_number=form.phone_number.data).first()

@@ -13,6 +13,10 @@
         {% if first_name %}
             <h2> Thanks, {{ first_name }}</h2>
             <h2> Your submission has been recorded </h2>
+        {% elif form.errors %}
+            <h2> Error: {{ form.errors }} </h2>
+        {% else %}
+            <h2> Error: {{ form.first_name.data }} has already been registered under {{ form.phone_number.data }} ! </h2>
         {% endif %}
 
 				{{ form.hidden_tag() }}
