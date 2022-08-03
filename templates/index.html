@@ -4,8 +4,12 @@
 <body>
   <form method="POST">
         <div class="dName">
-          <img src="{{ url_for('static', filename='yr_summerfest.png') }}" />
-      	<h2> {{ title }} </h2>
+          <center><img src="{{ url_for('static', filename='yr_summerfest.png') }}" /></center>
+          <br/>
+          <br/>
+          <center><img src="{{ url_for('static', filename='registration_form.png') }}" /></center>
+          <br/>
+          <br/>
         {% if first_name %}
             <h2> Thanks, {{ first_name }}</h2>
             <h2> Your submission has been recorded </h2>
