@@ -3,6 +3,7 @@
 {% block content %}
 <body>
   <form method="POST">
+				{{ form.hidden_tag() }}
         <div class="dName">
           <center><img src="{{ url_for('static', filename='yr_summerfest.png') }}" /></center>
           <br/>
@@ -16,52 +17,51 @@
         {% elif form.errors %}
             <h2> Error: {{ form.errors }} </h2>
           {% elif phone_number %}
-            <h2> Error: {{ form.first_name.data }} has already been registered under {{ phone_number }} ! </h2>
+            <h2> Error: You have already been registered! </h2>
         {% endif %}
 
-				{{ form.hidden_tag() }}
-
-				{{ form.first_name.label }}
+        
+        <img src="{{ url_for('static', filename='firstname.png') }}" />
 				{{ form.first_name() }}
         <br/>
         <br/>
 
-				{{ form.last_name.label }}
+        <img src="{{ url_for('static', filename='lastname.png') }}" />
 				{{ form.last_name() }}
         <br/>
         <br/>
 
-				{{ form.email.label }}
+        <img src="{{ url_for('static', filename='email.png') }}" />
 				{{ form.email() }}
         <br/>
         <br/>
 
-				{{ form.address.label }}
+        <img src="{{ url_for('static', filename='address.png') }}" />
 				{{ form.address() }}
         <br/>
         <br/>
 
-				{{ form.state.label }}
+        <img src="{{ url_for('static', filename='state.png') }}" />
 				{{ form.state() }}
         <br/>
         <br/>
 
-				{{ form.city.label }}
+        <img src="{{ url_for('static', filename='city.png') }}" />
 				{{ form.city() }}
         <br/>
         <br/>
 
-				{{ form.zip.label }}
+        <img src="{{ url_for('static', filename='zipcode.png') }}" />
 				{{ form.zip() }}
         <br/>
         <br/>
 
-				{{ form.phone_number.label }}
+        <img src="{{ url_for('static', filename='phonenumber.png') }}" />
 				{{ form.phone_number() }}
         <br/>
         <br/>
 
-				{{ form.num_tickets.label }}
+        <img src="{{ url_for('static', filename='guests.png') }}" />
 				{{ form.num_tickets() }}
 				<br/>
         <br/>
