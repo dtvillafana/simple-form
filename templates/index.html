@@ -16,56 +16,55 @@
             <h2> Your submission has been recorded </h2>
         {% elif form.errors %}
             <h2> Error: {{ form.errors }} </h2>
-          {% elif phone_number %}
+        {% elif phone_number %}
             <h2> Error: You have already been registered! </h2>
         {% endif %}
 
         
         <img src="{{ url_for('static', filename='firstname.png') }}" />
+        <br/>
 				{{ form.first_name() }}
-        <br/>
-        <br/>
+        <br/> <br/>
 
         <img src="{{ url_for('static', filename='lastname.png') }}" />
+        <br/>
 				{{ form.last_name() }}
-        <br/>
-        <br/>
+        <br/> <br/>
 
         <img src="{{ url_for('static', filename='email.png') }}" />
+        <br/>
 				{{ form.email() }}
-        <br/>
-        <br/>
+        <br/> <br/>
 
         <img src="{{ url_for('static', filename='address.png') }}" />
+        <br/>
 				{{ form.address() }}
-        <br/>
-        <br/>
+        <br/> <br/>
 
         <img src="{{ url_for('static', filename='state.png') }}" />
+        <br/>
 				{{ form.state() }}
-        <br/>
-        <br/>
+        <br/> <br/>
 
         <img src="{{ url_for('static', filename='city.png') }}" />
+        <br/>
 				{{ form.city() }}
-        <br/>
-        <br/>
+        <br/> <br/>
 
         <img src="{{ url_for('static', filename='zipcode.png') }}" />
+        <br/>
 				{{ form.zip() }}
-        <br/>
-        <br/>
+        <br/> <br/>
 
         <img src="{{ url_for('static', filename='phonenumber.png') }}" />
+        <br/>
 				{{ form.phone_number() }}
-        <br/>
-        <br/>
+        <br/> <br/>
 
         <img src="{{ url_for('static', filename='guests.png') }}" />
+        <br/>
 				{{ form.num_tickets() }}
-				<br/>
-        <br/>
-        <br/>
+				<br/> <br/> <br/>
 				{{ form.submit() }}
 
 			</form>
