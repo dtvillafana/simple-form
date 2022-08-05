@@ -8,12 +8,12 @@
 				{{ form.hidden_tag() }}
 
         <div class="form">
-          <center><img src="{{ url_for('static', filename='yr_summerfest.png') }}" /></center>
-          <br/>
-          <br/>
-          <center><img src="{{ url_for('static', filename='registration_form.png') }}" /></center>
-          <br/>
-          <br/>
+          <center><tr><img src="{{ url_for('static', filename='yr_summerfest.png') }}" /></tr></center>
+
+
+          <center><tr><img src="{{ url_for('static', filename='registration_form.png') }}" /></tr></center>
+
+
 
         {% if first_name %}
             <h2> Thanks, {{ first_name }}</h2>
@@ -24,74 +24,74 @@
             <h2> Error: You have already been registered! </h2>
         {% endif %}
 
-        
-        <img src="{{ url_for('static', filename='firstname.png') }}" />
-        <br/>
+        <table>
+        <tr><img src="{{ url_for('static', filename='firstname.png') }}" /></tr>
+
         <div class="col-md-6">
 				{{ form.first_name() }}
         </div>
-        <br/> <br/>
 
-        <img src="{{ url_for('static', filename='lastname.png') }}" />
-        <br/>
-        <div class="col-md-6">
+
+        <tr><img src="{{ url_for('static', filename='lastname.png') }}" /></tr>
+
+        <tr class="col-md-6">
 				{{ form.last_name() }}
-        </div>
-        <br/> <br/>
+        </tr>
 
-        <img src="{{ url_for('static', filename='email.png') }}" />
-        <br/>
-        <div class="col-md-6">
+
+        <tr><img src="{{ url_for('static', filename='email.png') }}" /></tr>
+
+        <tr class="col-md-6">
 				{{ form.email() }}
-        </div>
-        <br/> <br/>
+        </tr>
 
-        <img src="{{ url_for('static', filename='address.png') }}" />
-        <br/>
-        <div class="col-md-6">
+
+        <tr><img src="{{ url_for('static', filename='address.png') }}" /></tr>
+
+        <tr class="col-md-6">
 				{{ form.address() }}
-        </div>
-        <br/> <br/>
+        </tr>
 
-        <img src="{{ url_for('static', filename='state.png') }}" />
-        <br/>
-        <div class="col-md-6">
+
+        <tr><img src="{{ url_for('static', filename='state.png') }}" /></tr>
+
+        <tr class="col-md-6">
     		{{ form.state() }}
-        </div>`
-        <br/> <br/>
+        </tr>`
 
-        <img src="{{ url_for('static', filename='city.png') }}" />
-        <br/>
-          <div class="col-md-6">
+
+        <tr><img src="{{ url_for('static', filename='city.png') }}" /></tr>
+
+          <tr class="col-md-6">
   				      {{ form.city() }}
-          </div>
-        <br/> <br/>
+          </tr>
 
-        <img src="{{ url_for('static', filename='zipcode.png') }}" />
-        <br/>
-          <div class="col-md-3">
+
+        <tr><img src="{{ url_for('static', filename='zipcode.png') }}" /></tr>
+
+          <tr class="col-md-3">
   				      {{ form.zip() }}
-          </div>
-        <br/> <br/>
+          </tr>
 
-        <img src="{{ url_for('static', filename='phonenumber.png') }}" />
-        <br/>
-          <div class="col-md-4">
+
+        <tr><img src="{{ url_for('static', filename='phonenumber.png') }}" /></tr>
+
+          <tr class="col-md-4">
   				      {{ form.phone_number() }}
-          </div>
-        <br/> <br/>
+          </tr>
 
-        <img src="{{ url_for('static', filename='guests.png') }}" />
-        <br/>
-          <div class="col-md-1">
+
+        <tr><img src="{{ url_for('static', filename='guests.png') }}" /></tr>
+
+          <tr class="col-md-1">
   				      {{ form.num_tickets() }}
-          </div>
-				<br/> <br/> <br/>
+          </tr>
 
-        <div class="col-md-2">
+
+        <tr class="col-md-2">
 				      {{ form.submit() }}
-        </div>
-
+        </tr>
+        </table>
 			</form>
         </div>
 </body>
