@@ -24,11 +24,11 @@
             <h2> Error: You have already been registered! </h2>
         {% endif %}
 
-
+        
         <img src="{{ url_for('static', filename='firstname.png') }}" />
         <br/>
         <div class="col-md-6">
-				<center>{{ form.first_name() }}</center>
+				{{ form.first_name() }}
         </div>
         <br/> <br/>
 
