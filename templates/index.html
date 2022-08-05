@@ -24,7 +24,7 @@
             <h2> Error: You have already been registered! </h2>
         {% endif %}
 
-        <table>
+
         <tr><img src="{{ url_for('static', filename='firstname.png') }}" /></tr>
 
         <div class="col-md-6">
@@ -34,64 +34,64 @@
 
         <tr><img src="{{ url_for('static', filename='lastname.png') }}" /></tr>
 
-        <tr class="col-md-6">
+        <div class="col-md-6">
 				{{ form.last_name() }}
-        </tr>
+        </div>
 
 
         <tr><img src="{{ url_for('static', filename='email.png') }}" /></tr>
 
-        <tr class="col-md-6">
+        <div class="col-md-6">
 				{{ form.email() }}
-        </tr>
+        </div>
 
 
         <tr><img src="{{ url_for('static', filename='address.png') }}" /></tr>
 
-        <tr class="col-md-6">
+        <div class="col-md-6">
 				{{ form.address() }}
-        </tr>
+        </div>
 
 
         <tr><img src="{{ url_for('static', filename='state.png') }}" /></tr>
 
-        <tr class="col-md-6">
+        <div class="col-md-6">
     		{{ form.state() }}
-        </tr>`
+        </div>`
 
 
         <tr><img src="{{ url_for('static', filename='city.png') }}" /></tr>
 
-          <tr class="col-md-6">
+          <div class="col-md-6">
   				      {{ form.city() }}
-          </tr>
+          </div>
 
 
         <tr><img src="{{ url_for('static', filename='zipcode.png') }}" /></tr>
 
-          <tr class="col-md-3">
+          <div class="col-md-3">
   				      {{ form.zip() }}
-          </tr>
+          </div>
 
 
         <tr><img src="{{ url_for('static', filename='phonenumber.png') }}" /></tr>
 
-          <tr class="col-md-4">
+          <div class="col-md-4">
   				      {{ form.phone_number() }}
-          </tr>
+          </div>
 
 
         <tr><img src="{{ url_for('static', filename='guests.png') }}" /></tr>
 
-          <tr class="col-md-1">
+          <div class="col-md-1">
   				      {{ form.num_tickets() }}
-          </tr>
+          </div>
 
 
-        <tr class="col-md-2">
+        <div class="col-md-2">
 				      {{ form.submit() }}
-        </tr>
-        </table>
+        </div>
+
 			</form>
         </div>
 </body>
