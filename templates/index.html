@@ -24,11 +24,11 @@
             <h2> Error: You have already been registered! </h2>
         {% endif %}
 
-        
+
         <img src="{{ url_for('static', filename='firstname.png') }}" />
         <br/>
         <div class="col-md-6">
-				{{ form.first_name() }}
+				<center>{{ form.first_name() }}</center>
         </div>
         <br/> <br/>
 
@@ -56,40 +56,40 @@
         <img src="{{ url_for('static', filename='state.png') }}" />
         <br/>
         <div class="col-md-6">
-				{{ form.state() }}
-        </div>
+    		{{ form.state() }}
+        </div>`
         <br/> <br/>
 
         <img src="{{ url_for('static', filename='city.png') }}" />
         <br/>
-        <div class="col-md-6">
-				{{ form.city() }}
-        </div>
+          <div class="col-md-6">
+  				      {{ form.city() }}
+          </div>
         <br/> <br/>
 
         <img src="{{ url_for('static', filename='zipcode.png') }}" />
         <br/>
-        <div class="col-md-3">
-				{{ form.zip() }}
-        </div>
+          <div class="col-md-3">
+  				      {{ form.zip() }}
+          </div>
         <br/> <br/>
 
         <img src="{{ url_for('static', filename='phonenumber.png') }}" />
         <br/>
-        <div class="col-md-4">
-				{{ form.phone_number() }}
-        </div>
+          <div class="col-md-4">
+  				      {{ form.phone_number() }}
+          </div>
         <br/> <br/>
 
         <img src="{{ url_for('static', filename='guests.png') }}" />
         <br/>
-        <div class="col-md-1">
-				{{ form.num_tickets() }}
-        </div>
+          <div class="col-md-1">
+  				      {{ form.num_tickets() }}
+          </div>
 				<br/> <br/> <br/>
 
         <div class="col-md-2">
-				{{ form.submit() }}
+				      {{ form.submit() }}
         </div>
 
 			</form>
