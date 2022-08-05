@@ -27,7 +27,7 @@
 
         <tr><img src="{{ url_for('static', filename='firstname.png') }}" /></tr>
 
-        <div class="col-md-6">
+        <div class="fields">
 				{{ form.first_name() }}
         </div>
 
@@ -69,26 +69,26 @@
 
         <tr><img src="{{ url_for('static', filename='zipcode.png') }}" /></tr>
 
-          <div class="col-md-3">
+          <div class="col-md-6">
   				      {{ form.zip() }}
           </div>
 
 
         <tr><img src="{{ url_for('static', filename='phonenumber.png') }}" /></tr>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
   				      {{ form.phone_number() }}
           </div>
 
 
         <tr><img src="{{ url_for('static', filename='guests.png') }}" /></tr>
 
-          <div class="col-md-1">
+          <div class="col-md-6">
   				      {{ form.num_tickets() }}
           </div>
 
 
-        <div class="col-md-2">
+        <div class="fields">
 				      {{ form.submit() }}
         </div>
 
