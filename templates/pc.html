@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+  <form method="POST">
+
+				{{ form.hidden_tag() }}
+
+        <div class="form">
+          <center><tr><img src="{{ url_for('static', filename='yr_summerfest.png')  }}" width="80%"/></tr></center>
+
+
+          <center><tr><img src="{{ url_for('static', filename='registration_form.png') }}" /></tr></center>
+
+
+
+        {% if first_name %}
+            <h2> Thanks, {{ first_name }}</h2>
+            <h2> Your submission has been recorded </h2>
+        {% elif form.errors %}
+            <h2> Error: {{ form.errors }} </h2>
+        {% elif phone_number %}
+            <h2> Error: You have already been registered! </h2>
+        {% endif %}
+
+
+        <tr><img src="{{ url_for('static', filename='firstname.png') }}" /></tr>
+
+        <div class="fields">
+				{{ form.first_name() }}
+        </div>
+
+
+        <tr><img src="{{ url_for('static', filename='lastname.png') }}" /></tr>
+
+        <div class="fields">
+				{{ form.last_name() }}
+        </div>
+
+
+        <tr><img src="{{ url_for('static', filename='email.png') }}" /></tr>
+
+        <div class="fields">
+				{{ form.email() }}
+        </div>
+
+
+        <tr><img src="{{ url_for('static', filename='address.png') }}" /></tr>
+
+        <div class="fields">
+				{{ form.address() }}
+        </div>
+
+
+        <tr><img src="{{ url_for('static', filename='state.png') }}" /></tr>
+
+        <div class="fields">
+    		{{ form.state() }}
+        </div>
+
+
+        <tr><img src="{{ url_for('static', filename='city.png') }}" /></tr>
+
+          <div class="fields">
+  				      {{ form.city() }}
+          </div>
+
+
+        <tr><img src="{{ url_for('static', filename='zipcode.png') }}" /></tr>
+
+          <div class="fields">
+  				      {{ form.zip() }}
+          </div>
+
+
+        <tr><img src="{{ url_for('static', filename='phonenumber.png') }}" /></tr>
+
+          <div class="fields">
+  				      {{ form.phone_number() }}
+          </div>
+
+
+        <tr><img src="{{ url_for('static', filename='guests.png') }}" /></tr>
+
+          <div class="fields">
+  				      {{ form.num_tickets() }}
+          </div>
+
+
+        <div class="fields">
+				      {{ form.submit() }}
+        </div>
+
+			</form>
+        </div>
+</body>
+
+{% endblock %}
