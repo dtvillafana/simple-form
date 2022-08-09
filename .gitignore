@@ -1,0 +1,7 @@
+.venv/*
+__pycache__/*
+static/*
+std.log
+registrants.db
+autopublish.db
+autopublish.sh
