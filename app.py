@@ -113,6 +113,42 @@ def index():
             form=form)
 
 
+@app.route('/pc', methods=['GET', 'POST'])
+def pc(): 
+    title = 'Registration Form'
+    form = RegisterForm()
+    first_name = None
+    phone_number = None
+
+    # Validates Form
+    if form.validate_on_submit():
+        registrant =  Registrants.query.filter_by(phone_number=form.phone_number.data).first()
+        if registrant is None:
+            registrant = Registrants(first_name=form.first_name.data, last_name=form.last_name.data, email=form.email.data, address=form.address.data, state=form.state.data, city=form.city.data, zip=form.zip.data, phone_number=form.phone_number.data, num_tickets=form.num_tickets.data)
+            db.session.add(registrant)
+            db.session.commit()
+            flash("Registration Submitted!")
+            first_name = form.first_name.data
+            form.first_name.data = ''
+            form.last_name.data = ''
+            form.email.data = ''
+            form.address.data = ''
+            form.state.data = ''
+            form.city.data = ''
+            form.zip.data = ''
+            form.phone_number.data = ''
+            form.num_tickets.data = ''
+        else:
+            phone_number = registrant
+
+
+    return render_template('pc.html',
+            title=title,
+            first_name=first_name,
+            phone_number=phone_number,
+            form=form)
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('index.html'), 404 
