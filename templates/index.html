@@ -8,7 +8,7 @@
 				{{ form.hidden_tag() }}
 
         <div class="form">
-          <center><tr><img src="{{ url_for('static', filename='yr_summerfest.png') }}" /></tr></center>
+          <center><tr><img src="{{ url_for('static', filename='yr_summerfest.png')  }}" width="80%"/></tr></center>
 
 
           <center><tr><img src="{{ url_for('static', filename='registration_form.png') }}" /></tr></center>
@@ -57,7 +57,7 @@
 
         <div class="fields">
     		{{ form.state() }}
-        </div>`
+        </div>
 
 
         <tr><img src="{{ url_for('static', filename='city.png') }}" /></tr>
@@ -81,7 +81,7 @@
           </div>
 
 
-        <tr><img src="{{ url_for('static', filename='guests.png') }}" /></tr>
+        <tr><img src="{{ url_for('static', filename='guests.png') }}" width="80%"/></tr>
 
           <div class="fields">
   				      {{ form.num_tickets() }}
